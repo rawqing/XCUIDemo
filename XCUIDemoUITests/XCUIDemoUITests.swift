@@ -23,6 +23,14 @@ class XCUIDemoUITests: XCTestCase {
     }
     
     func testExample() {
+        let lb = Bundle(for: XCUIDemoUITests.self)
+        
+        print("\n class func localDone : \(Handler.local("done"))\n")
+        
+        print("\n extension field localDone : \("cancel".local)\n")
+        
+        print("\n extension func localDone : \("done".local(lb))\n")
+
     }
     
 }
