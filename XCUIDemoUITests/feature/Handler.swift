@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import XCTest
 
 class Handler{
     
@@ -21,4 +22,5 @@ class Handler{
         return NSLocalizedString(key, bundle:bl!,comment: "find \(self) local string .")
     }
 
+    
 }

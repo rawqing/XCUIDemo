@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XCUIDemoUITests/tests/LoginTest/BreakLoginTest.swift"
+            timestampString = "541261801.509351"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "testLogin()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCUIDemoUITests.BreakLoginTest.testLogin() -&gt; ()"
+                  moduleName = "XCUIDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/king/Documents/workspace/XCUIDemo/XCUIDemoUITests/tests/LoginTest/BreakLoginTest.swift"
+                  timestampString = "541261255.819783"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "813">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Optional&lt;Swift.Bool&gt; in XCUIDemoUITests.BreakLoginTest.testLogin() -&gt; ()"
+                  moduleName = "XCUIDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/king/Documents/workspace/XCUIDemo/XCUIDemoUITests/tests/LoginTest/BreakLoginTest.swift"
+                  timestampString = "541261255.82263"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
