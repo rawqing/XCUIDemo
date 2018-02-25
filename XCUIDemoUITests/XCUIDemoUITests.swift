@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Nimble
 
 class XCUIDemoUITests: XCTestCase {
         
@@ -33,4 +34,8 @@ class XCUIDemoUITests: XCTestCase {
 
     }
     
+    func testEx(){
+        expect(1+1).to(equal(2))
+        expect("完成").to(equal("done".local))
+    }
 }
