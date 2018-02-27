@@ -8,6 +8,7 @@
 
 import XCTest
 import Nimble
+import XCGLogger
 
 class XCUIDemoUITests: XCTestCase {
         
