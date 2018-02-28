@@ -24,3 +24,24 @@ class Handler{
 
     
 }
+
+enum UIElementField: String{
+    case Identifier = "identifier"
+    case Value = "value"
+    case Title = "title"
+    case Label = "label"
+    case ElementType = "elementType"
+    case IsEnabled = "isEnabled"
+    
+    static func == (l: UIElementField, r: String) -> String{
+        return l.rawValue + r
+    }
+}
+struct BB{
+    var left: UIElementField
+    var rigth: String
+    
+    static func == (l: BB, r: BB) -> String{
+        return l.left.rawValue + r.rigth
+    }
+}

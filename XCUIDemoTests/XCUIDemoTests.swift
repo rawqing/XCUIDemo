@@ -21,9 +21,9 @@ class XCUIDemoTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testExample() throws {
+        let str = .Value == "123"
+        print("\n \(str)")
     }
     
     func testPerformanceExample() {
@@ -33,4 +33,31 @@ class XCUIDemoTests: XCTestCase {
         }
     }
     
+}
+enum OperationError : Error {
+    case ErrorOne
+    case ErrorTwo
+    case ErrorThree(String)
+}
+
+extension String {
+    
+    func ltest() throws -> String {
+        if self == "hello"{
+            throw OperationError.ErrorThree("same string ! ")
+        }
+        return "hello \(self) "
+    }
+}
+enum UIElementField: String{
+    case Identifier = "identifier"
+    case Value = "value"
+    case Title = "title"
+    case Label = "label"
+    case ElementType = "elementType"
+    case IsEnabled = "isEnabled"
+    
+    static func == (l: UIElementField, r: String) -> String{
+        return "\(l.rawValue) == \(r)"
+    }
 }
