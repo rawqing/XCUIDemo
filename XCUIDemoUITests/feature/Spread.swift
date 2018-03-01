@@ -39,7 +39,7 @@ extension XCUIElement {
         self.tap()
         
         if let stringValue = self.value as? String {
-            let deleteString = String(repeating: XCUIKeyboardKey.delete.rawValue, count: stringValue.characters.count)
+            let deleteString = String(repeating: XCUIKeyboardKey.delete.rawValue, count: stringValue.count)
             
             self.typeText(deleteString)
         }
@@ -48,8 +48,30 @@ extension XCUIElement {
     }
     
     func wait(_ timeout: Double) -> XCUIElement{
-        self.waitForExistence(timeout: timeout)
+        _ = self.waitForExistence(timeout: timeout)
         return self.firstMatch
     }
 }
+
+extension XCUIElementQuery {
+    /*!
+     * 通过既定的匹配字符串来匹配
+     */
+    func element(matching predicateString: String) -> XCUIElement {
+        return self.element(matching: NSPredicate(format: predicateString))
+    }
+}
+
+/*!
+ * 定义一个操作符group
+ */
+precedencegroup InfixPrecedence{
+    associativity: none
+}
+
+
+
+
+
+
 

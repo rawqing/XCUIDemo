@@ -25,6 +25,17 @@ class Handler{
     
 }
 
+//以 ? 开头
+infix operator |> : InfixPrecedence
+//以 ? 结尾
+infix operator >| : InfixPrecedence
+//包含 ?
+infix operator <> : InfixPrecedence
+//不包含 ?
+infix operator >< : InfixPrecedence
+///
+/// 将属性匹配通过操作符转换成字符串
+///
 enum UIElementField: String{
     case Identifier = "identifier"
     case Value = "value"
@@ -33,15 +44,18 @@ enum UIElementField: String{
     case ElementType = "elementType"
     case IsEnabled = "isEnabled"
     
-    static func == (l: UIElementField, r: String) -> String{
-        return l.rawValue + r
+    static func == (left: UIElementField, right: String) -> String{
+        return "\(left.rawValue) == '\(right)'"
     }
-}
-struct BB{
-    var left: UIElementField
-    var rigth: String
     
-    static func == (l: BB, r: BB) -> String{
-        return l.left.rawValue + r.rigth
+    static func |> (left: UIElementField, right: String) -> String{
+        return "\(left.rawValue) BEGINSWITH '\(right)'"
+    }
+    static func >| (left: UIElementField, right: String) -> String{
+        return "\(left.rawValue) ENDSWITH '\(right)'"
+    }
+    static func <> (left: UIElementField, right: String) -> String{
+        return "\(left.rawValue) CONTAINS '\(right)'"
     }
 }
+

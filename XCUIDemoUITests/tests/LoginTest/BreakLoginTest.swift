@@ -41,4 +41,14 @@ class BreakLoginTest: BaseTest{
         let s = app.staticTexts["无效的帐号或密码"].waitForExistence(timeout: 5)
         expect(s) == true
     }
+    func testLabel() {
+//        let u = app.textFields.element(matching: NSPredicate(format: "identifier == 'accountTF'"))
+        
+        let z = app.textFields.element(matching: .Identifier == "accountTF")
+//        print("\n")
+//        print(app.debugDescription)
+        z.replaceText("str")
+        let z1 = app.staticTexts.element(matching: .Label == "没有账号?")
+        expect(z1.exists) == true
+    }
 }
