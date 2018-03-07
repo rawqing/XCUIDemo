@@ -27,10 +27,22 @@ class XCUIDemoTests: XCTestCase {
     }
     
     func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        let arr = [
+            ["zhangsan",18],
+            ["lisi",19],
+            
+        ]
+        
+        let test = {(name: String, age: Int) -> Void in
+            XCTAssert("zhangsan".elementsEqual(name))
+            XCTAssert(age == 18)
         }
+        en(arr: arr, c: test as! (Any, Int) -> Void)
+        
+    }
+    
+    func en(arr: Array<Any> ,c: (Any, Int) -> Void){
+        
     }
     
 }
