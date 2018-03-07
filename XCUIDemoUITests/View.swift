@@ -15,6 +15,6 @@ class View{
 
 // 创建一个 app 的单例
 class UIA {
-    static let app: XCUIApplication = XCUIApplication(bundleIdentifier:"com.trubuzz.JuCaiDao")
+    static let app: XCUIApplication = XCUIApplication(bundleIdentifier:"com.trubuzz.JuCaiDao1111")
     private init(){}
 }
