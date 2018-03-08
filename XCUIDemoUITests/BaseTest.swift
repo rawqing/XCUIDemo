@@ -10,7 +10,7 @@ import Foundation
 import XCTest
 
 class BaseTest : XCTestCase {
-    let app = UIA.app
+   
     
 //    public init(invocation: NSInvocation?){
 //        super.init(invocation: invocation)

@@ -1,5 +1,5 @@
 //
-//  SomeSampleTest.swift
+//  LoginTest.swift
 //  XCUIDemoTests
 //
 //  Created by king on 2018/3/1.

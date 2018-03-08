@@ -9,42 +9,42 @@
 import Foundation
 import XCTest
 
-class SomeSampleTest: BaseTest {
+class LoginTest: BaseTest {
     private let lv = LoginView()
     private var user: String?
     private var password: String?
-    private var esp: String?
+    private var expectation: String?
    
     override class var defaultTestSuite : XCTestSuite {
         
         let testSuite = XCTestSuite(name: NSStringFromClass(self))
         
-        addTestsWithArray(user: "123", pwd: "123333",exp:"invalid_format_user", toTestSuite: testSuite)
-        addTestsWithArray(user: "123sdfs@126.com", pwd: "123333",exp:"invalid_user", toTestSuite: testSuite)
+        addParamsTests(user: "123", pwd: "123333",exp:"invalid_format_user", toTestSuite: testSuite)
+        addParamsTests(user: "123sdfs@126.com", pwd: "123333",exp:"invalid_user", toTestSuite: testSuite)
         
         return testSuite
     }
     
-    private class func addTestsWithArray(user: String, pwd: String, exp: String, toTestSuite testSuite: XCTestSuite) {
+    private class func addParamsTests(user: String, pwd: String, exp: String, toTestSuite testSuite: XCTestSuite) {
         let invocations = self.testInvocations
         for invocation in invocations {
             
-            let testCase = SomeSampleTest(invocation: invocation)
+            let testCase = LoginTest(invocation: invocation)
             testCase.user = user
             testCase.password = pwd
-            testCase.esp = exp
+            testCase.expectation = exp
             
             testSuite.addTest(testCase)
         }
     }
     
-    func testGeneratedString() {
+    func testLogin() {
         
         lv.userInput.replaceText(user!)
         lv.pwdInput.replaceText(password!)
         lv.submit.tap()
         
-        XCTAssert(app.staticTexts[(esp?.local)!].waitForExistence(timeout: 5))
+        XCTAssert(lv.toastIsExistent(self.expectation!))
     }
     
   
